@@ -34,7 +34,7 @@ If you discover any security related issues, please email sa.vaziry@gmail.com in
 
 ## Credits
 
-- [Saeed Vaziry][link-author]
+- [Saeed Vaziry][https://github.com/saeedvaziry]
 
 ## License
 
