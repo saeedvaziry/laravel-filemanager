@@ -1,6 +1,6 @@
 # Laravel Filemanager
 
-This is a simple laravel package that allows you to manage your files in your application.
+This is a simple ``laravel 5.2`` package that allows you to manage your files in your application.
 
 ## Install
 
