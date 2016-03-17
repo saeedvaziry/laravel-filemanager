@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <title>{{ trans('filemanager::filemanager.filemanager') }}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="container" style="margin-top:10px;">
@@ -45,27 +46,23 @@
                         <i class="fa fa-file"></i> {{ trans('filemanager::filemanager.files') }}
                     </div>
                     <div class="panel-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped table-bordered table-advance table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>{{ trans('filemanager::filemanager.file_name') }}</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach($files as $f)
-                                    <tr>
-                                        <td><a href="javascript:;" data-toggle="popover" data-placement="right" data-img="@if(in_array($f['type'],$imageTypes)) {{ url('uploads/'.$f['file']->getRelativePathname()) }} @endif">{{ $f['file']->getRelativePathname() }}</a></td>
-                                        <td>
-                                            <a href="#" class="btn btn-success btn-xs btn_use_file" data-file="{{ url($f['file']) }}" data-filename="{{ $f['fileName'] }}">{{ trans('filemanager::filemanager.use_file') }}</a>
-                                            <a href="{{ asset(config('filemanager.uploadDir').'/'.$f['file']->getRelativePathname()) }}" class="btn btn-primary btn-xs">{{ trans('filemanager::filemanager.download') }}</a>
-                                            <a href="{{ url(config('filemanager.basicRoute').'/delete?name='.$f['file']->getRelativePathname()) }}" class="btn btn-danger btn-xs btn_show_confirm">{{ trans('filemanager::filemanager.delete') }}</a>
-                                        </td>
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
+                        <div class="row">
+                        @foreach($files as $f)
+                            <div class="col-sm-3">
+                                <div class="thumbnail text-center">
+                                    @if(in_array(File::extension($f['file']),config('filemanager.imageTypes')))
+                                        <img src="{{ asset(config('filemanager.uploadDir').'/'.$f['file']->getRelativePathname()) }}" style="height:100px;">
+                                    @else
+                                        <i class="{{ config('filemanager.fileTypeIcons')[File::extension($f['file'])] }} fa-5x" style="font-size: 7em;"></i>
+                                    @endif
+                                    <div class="caption">
+                                        <p>{!! substr($f['file']->getRelativePathname(), 0,15) !!}</p>
+                                        <a href="{{ asset(config('filemanager.uploadDir').'/'.$f['file']->getRelativePathname()) }}" class="btn btn-primary btn-xs">{{ trans('filemanager::filemanager.download') }}</a>
+                                        <a href="{{ url(config('filemanager.basicRoute').'/delete?name='.$f['file']->getRelativePathname()) }}" class="btn btn-danger btn-xs btn_show_confirm">{{ trans('filemanager::filemanager.delete') }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                         </div>
                     </div>
                     <div class="panel-footer">
