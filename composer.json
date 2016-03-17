@@ -2,6 +2,7 @@
     "name": "saeedvaziry/laravel-filemanager",
     "type": "library",
     "description": "",
+    "minimum-stability": "dev",
     "keywords": [
         "laravel",
         "filemanager"
