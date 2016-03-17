@@ -2,6 +2,10 @@
 
 This is a simple ``laravel 5.2`` package that allows you to manage your files in your application.
 
+## Demo
+
+- [See Demo][https://github.com/saeedvaziry/laravel-filemanager/wiki/Demo]
+
 ## Install
 
 Via Composer
