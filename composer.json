@@ -1,6 +1,7 @@
 {
     "name": "saeedvaziry/laravel-filemanager",
-    "description": "A Simple Filemanager for Laravel",
+    "type": "library",
+    "description": "",
     "keywords": [
         "laravel",
         "filemanager"
@@ -26,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SaeedVaziry\\LaravelFilemanager\\": "src",
+            "SaeedVaziry\\LaravelFilemanager\\": "src"
         }
     },
     "scripts": {
