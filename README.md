@@ -8,7 +8,7 @@ This is a simple laravel package that allows you to manage your files in your ap
 
 ## Demo
 
-- [See Demo][https://github.com/saeedvaziry/laravel-filemanager/wiki/Demo]
+- https://github.com/saeedvaziry/laravel-filemanager/wiki/Demo
 
 ## Install
 
