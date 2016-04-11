@@ -14,7 +14,7 @@ This is a simple laravel package that allows you to manage your files in your ap
 
 Via Composer
 
-Add ``saeedvaziry/laravel-filemanager": "0.0.*`` to your ``composer.json`` file and run ``composer update``
+Add ``saeedvaziry/laravel-filemanager": "0.0.*"`` to your ``composer.json`` file and run ``composer update``
 
 Add this line to ``config/app.php`` in providers array.
 
