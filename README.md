@@ -1,3 +1,5 @@
+[![StyleCI](https://github.styleci.io/repos/54067299/shield?branch=master)](https://github.styleci.io/repos/54067299)
+
 # Laravel Filemanager
 
 This is a simple laravel package that allows you to manage your files in your application.
