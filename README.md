@@ -36,7 +36,7 @@ Open ``config/filemanager.php`` and change what you need.
 
 ## Contributing
 
-Just email me...
+Make a PR
 
 ## Security
 
