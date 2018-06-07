@@ -15,8 +15,9 @@ class LaravelFilemanagerServiceProvider extends ServiceProvider
     {
 
         // routes
-        if (!$this->app->routesAreCached()) 
+        if (!$this->app->routesAreCached()) {
             require __DIR__.'/app/Http/routes.php';
+        }
 
         // views
         $this->loadViewsFrom(__DIR__.'/resources/views', 'filemanager');
@@ -26,8 +27,8 @@ class LaravelFilemanagerServiceProvider extends ServiceProvider
 
         // publishes
         $this->publishes([
-            __DIR__.'/resources/views' => resource_path('views/vendor/filemanager'),
-            __DIR__.'/resources/lang' => resource_path('lang/vendor/filemanager'),
+            __DIR__.'/resources/views'        => resource_path('views/vendor/filemanager'),
+            __DIR__.'/resources/lang'         => resource_path('lang/vendor/filemanager'),
             __DIR__.'/config/filemanager.php' => config_path('filemanager.php'),
         ]);
     }
